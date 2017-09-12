@@ -1,5 +1,5 @@
 class Sphinx
-  attr_reader :correct, :wrong, :question_asked
+  attr_accessor :correct, :wrong, :question_asked
 
   def initialize
     @wrong = 0
@@ -45,6 +45,7 @@ class Sphinx
   end
 
   def answer_given(answer)
+    binding.pry
     answer == get_answer ? @correct += 1 : @wrong += 1
   end
 end

@@ -1,12 +1,24 @@
 <h1>Riddle of the Sphinx</h1>
 
-<p><%= @question1 %></p>
 
 <form  action="/output" method="post">
+  <h3><%= @question1 %></h3>
   <div class="form-group">
-    <label for="num_1">How do you answer:</label>
-    <!-- <input type="hidden" name="sphinx" value="<%= @sphinx %>"> -->
-    <input  name="answer" class="form-control" type="text">
+    <label for="answer1">How do you answer:</label>
+    <input  name="answer1" class="form-control" type="text">
   </div>
+
+  <h3><%= @question2 %></h3>
+  <div class="form-group">
+    <label for="answer2">How do you answer:</label>
+    <input  name="answer2" class="form-control" type="text">
+  </div>
+
+  <h3><%= @question3 %></h3>
+  <div class="form-group">
+    <label for="answer3">How do you answer:</label>
+    <input  name="answer3" class="form-control" type="text">
+  </div>
+
   <button name="submit" type="submit" class="btn">Answer</button>
 </form>
