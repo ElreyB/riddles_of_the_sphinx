@@ -6,7 +6,7 @@ require ('pry')
 
 SPHINX = Sphinx.new
 get'/' do
-  @question = SPHINX.ask_question(4)
+  @question = SPHINX.ask_question(rand(1..8))
   erb :input
 end
 
