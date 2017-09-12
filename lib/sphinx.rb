@@ -1,9 +1,10 @@
 class Sphinx
-  attr_reader :correct, :wrong
+  attr_reader :correct, :wrong, :question_asked
 
   def initialize
     @wrong = 0
     @correct = 0
+    @question_asked = 0
   end
 
   def questions
@@ -30,5 +31,18 @@ class Sphinx
       7 => "The North Pole.",
       8 => "Asteroids."
     }
+  end
+
+  def ask_question(question_key)
+    @question_asked = question_key
+    questions[question_key]
+  end
+
+  def get_answer
+    answers[@question_asked]
+  end
+
+  def answer_given(answer)
+    answer == get_answer ? @correct += 1 : @wrong += 1
   end
 end
