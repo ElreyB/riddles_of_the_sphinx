@@ -31,7 +31,7 @@ describe 'Sphinx' do
     end
 
     it 'returns a question' do
-      answer = "A Bible-pressed leaf, or flower."
+      answer = "a flower"
       expect(sphinx.answers[4]).to eq answer
     end
   end
@@ -50,14 +50,14 @@ describe 'Sphinx' do
   describe '#get_answer' do
     it 'will return answer to question' do
       sphinx.ask_question(4)
-      expect(sphinx.get_answer).to eq "A Bible-pressed leaf, or flower."
+      expect(sphinx.get_answer).to eq "a flower"
     end
   end
 
   describe '#answer_given' do
     it 'will change #correct from 0 to 1' do
       sphinx.ask_question(4)
-      expect{ sphinx.answer_given("A Bible-pressed leaf, or flower.") }.to change{ sphinx.correct }.from(0).to(1)
+      expect{ sphinx.answer_given("a flower") }.to change{ sphinx.correct }.from(0).to(1)
     end
 
     it 'will change #wrong from 0 to 1' do

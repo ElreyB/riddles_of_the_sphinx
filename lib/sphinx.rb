@@ -16,20 +16,22 @@ class Sphinx
       5 => "To you,\nrude would I never be,\nThough I flag my tongue for all to see.",
       6 => "I welcome the day with a show of light,\nI steathily came here in the night.\nI bathe the earthy stuff at dawn,\nBut by the noon, alas! I'm gone.",
       7 => "Here there is no north, west, nor east,\nAnd weather fit for not man nor beast.",
-      8 => "Large as a mountain,\nsmall as a pea,\nEndlessly swimming in a waterless sea."
+      8 => "Large as a mountain,\nsmall as a pea,\nEndlessly swimming in a waterless sea.",
+      9 => "What walks on four legs in the morning,\ntwo legs in the afternoon,\nthree legs in the evening, and no legs at night?"
     }
   end
 
   def answers
     answers = {
-      1 => "I am a leg.",
-      2 => "A candle.",
-      3 => "A riddler, or riddle.",
-      4 => "A Bible-pressed leaf, or flower.",
-      5 => "A dog.",
-      6 => "The morning dew.",
-      7 => "The North Pole.",
-      8 => "Asteroids."
+      1 => "a leg",
+      2 => "a candle",
+      3 => "a riddle",
+      4 => "a flower",
+      5 => "a dog",
+      6 => "morning dew",
+      7 => "north pole",
+      8 => "asteroids",
+      9 => "a human"
     }
   end
 
