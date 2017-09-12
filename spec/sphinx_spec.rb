@@ -20,7 +20,7 @@ describe 'Sphinx' do
     end
 
     it 'returns a question' do
-      question = "Close to the words of life stay I, But I wither, wane, and grow dry."
+      question = "Close to the words of life stay I,\nBut I wither, wane, and grow dry."
       expect(sphinx.questions[4]).to eq question
     end
   end
@@ -38,7 +38,7 @@ describe 'Sphinx' do
 
   describe '#ask_question' do
     it 'will return a question' do
-      question = "Close to the words of life stay I, But I wither, wane, and grow dry."
+      question = "Close to the words of life stay I,\nBut I wither, wane, and grow dry."
       expect(sphinx.ask_question(4)).to eq question
     end
 
