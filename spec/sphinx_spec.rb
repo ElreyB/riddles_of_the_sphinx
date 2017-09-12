@@ -24,4 +24,15 @@ describe 'Sphinx' do
       expect(sphinx.questions[4]).to eq question
     end
   end
+
+  describe '#answers' do
+    it 'will be a Hash' do
+      expect(sphinx.answers).to be_a Hash
+    end
+
+    it 'returns a question' do
+      answer = "A Bible-pressed leaf, or flower."
+      expect(sphinx.answers[4]).to eq answer
+    end
+  end
 end

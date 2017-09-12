@@ -18,4 +18,17 @@ class Sphinx
       8 => "Large as a mountain, small as a pea, Endlessly swimming in a waterless sea. "
     }
   end
+
+  def answers
+    answers = {
+      1 => "I am a leg.",
+      2 => "A candle.",
+      3 => "A riddler, or riddle.",
+      4 => "A Bible-pressed leaf, or flower.",
+      5 => "A dog.",
+      6 => "The morning dew.",
+      7 => "The North Pole.",
+      8 => "Asteroids."
+    }
+  end
 end
