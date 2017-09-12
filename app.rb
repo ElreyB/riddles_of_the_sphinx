@@ -1,15 +1,23 @@
 require ('sinatra')
 require ('sinatra/reloader')
-require ('./lib/template')
+also_reload('lib/**/*.rb')
+require ('./lib/sphinx')
+require ('pry')
 
+SPHINX = Sphinx.new
 get'/' do
+  @question = SPHINX.ask_question(4)
   erb :input
 end
 
-get'/output' do
-  @num_1 = params.fetch('num_1')
-  @num_2 = params.fetch('num_2')
-  numbers = Numbers.new(@num_1.to_i, @num_2.to_i)
-  @sum = numbers.add
+post'/output' do
+  @answer = params.fetch('answer')
+  SPHINX.answer_given(@answer)
+
+  if SPHINX.correct > 0
+    @string_to_display = "You have answered correctly!!!!!"
+  else
+    @string_to_display = "You have answered incorrectly!!!"
+  end
   erb :output
 end
