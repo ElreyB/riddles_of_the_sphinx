@@ -5,9 +5,6 @@ class Sphinx
     @wrong = 0
     @correct = 0
     @question_asked = 0
-    @question_1
-    @question_2
-    @question_3
   end
 
   def questions
@@ -48,7 +45,6 @@ class Sphinx
   end
 
   def answer_given(answer)
-    binding.pry
     answer == get_answer ? @correct += 1 : @wrong += 1
   end
 end
